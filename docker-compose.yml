@@ -7,16 +7,17 @@ services:
         environment:
             PYTHONUNBUFFERED: 'true'
         container_name: sys-idmapping-server
+        command: /app/run_web.sh
         depends_on:
             - sys-idmapping-datacontainer
         volumes_from: 
             - sys-idmapping-datacontainer
         ports:
-            - '8051:8000'
+            - '8052:8000'
    
     sys-idmapping-datacontainer:
         image: busybox
         container_name: sys-idmapping-datacontainer
         volumes:
-            - ./src/app:/app            
+            - ./app:/app            
    
