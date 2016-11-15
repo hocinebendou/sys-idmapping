@@ -19,9 +19,9 @@ Microservice for ID mapping management in the BIBBOX framework.
 
 
 ### GET /BIBBOXDocker-portlet.get-id-mapping-info
-'http://development.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId=pt99'
+`http://development.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId=pt99`
 
-'''json
+```json
 {
   "mappings": {
     "SUBJECT": {
@@ -48,10 +48,10 @@ Microservice for ID mapping management in the BIBBOX framework.
     "https://phenotips.org/DevGuide/RESTfulAPI"
   ]
 }
-'''
+```
 
 ### GET / info
-'http://idmapping.development.bibbox.org/idmapping/api/v1.0/info?id=SUBJECT@pt99.development.bibbox.org::P0000002'
+`http://idmapping.development.bibbox.org/idmapping/api/v1.0/info?id=SUBJECT@pt99.development.bibbox.org::P0000002`
 
 ### GET /generate
-'http://idmapping.development.bibbox.org/idmapping/api/v1.0/generate?id=SUBJECT@pt99.development.bibbox.org::P0000002?type=HR'
+`http://idmapping.development.bibbox.org/idmapping/api/v1.0/generate?id=SUBJECT@pt99.development.bibbox.org::P0000002?type=HR`
