@@ -1,0 +1,22 @@
+version: '2'
+services:
+
+    sys-idmapping-server:
+        build: 
+            context: ./images/webserver
+        environment:
+            PYTHONUNBUFFERED: 'true'
+        container_name: sys-idmapping-server
+        depends_on:
+            - sys-idmapping-datacontainer
+        volumes_from: 
+            - sys-idmapping-datacontainer
+        ports:
+            - '8051:8000'
+   
+    sys-idmapping-datacontainer:
+        image: busybox
+        container_name: sys-idmapping-datacontainer
+        volumes:
+            - ./src/app:/app            
+   

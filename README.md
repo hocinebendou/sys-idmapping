@@ -17,18 +17,11 @@ Microservice for ID mapping management in the BIBBOX framework.
 * SAMPLE
 * DATA
 
-http://idmapping.development.bibbox.org/idmapping/api/v1.0/generate?id=SUBJECT@pt99.development.bibbox.org::P0000002?type=HR
 
-http://idmapping.development.bibbox.org/idmapping/api/v1.0/generate?id=SUBJECT@pt99.development.bibbox.org::P0000002?type=HR?action=RELINK
-http://idmapping.development.bibbox.org/idmapping/api/v1.0/get-id-mapping_info?instanceId=pt99.development.bibbox.org
-http://idmapping.development.bibbox.org/idmapping/api/v1.0/get-id-mapping_info?instanceId=SUBJECT@pt99.development.bibbox.org::P0000002
+### GET /BIBBOXDocker-portlet.get-id-mapping-info
+'http://development.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId=pt99'
 
-
-http://idmapping.development.bibbox.org/idmapping/api/v1.0/generate?id=SUBJECT@pt99.development.bibbox.org::P0000002?type=HR
-
-
-http://development.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId=pt99
-'''
+'''json
 {
   "mappings": {
     "SUBJECT": {
@@ -57,7 +50,8 @@ http://development.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-inf
 }
 '''
 
+### GET / info
+'http://idmapping.development.bibbox.org/idmapping/api/v1.0/info?id=SUBJECT@pt99.development.bibbox.org::P0000002'
 
-
-### POST /activities
-`POST http://idmapping.demo.bibbox.com/activities/api/v1.0/getinfo`
+### GET /generate
+'http://idmapping.development.bibbox.org/idmapping/api/v1.0/generate?id=SUBJECT@pt99.development.bibbox.org::P0000002?type=HR'
