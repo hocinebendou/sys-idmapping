@@ -51,7 +51,7 @@ Microservice for ID mapping management in the BIBBOX framework.
 ```
 
 ### GET / info
-`http://idmapping.demo.bibbox.org//idmapping/api/v1.0/info/SUBJECT@pt99.demo.bibbox.org::P0000002`
+`http://idmapping.demo.bibbox.org/idmapping/api/v1.0/info/SUBJECT@pt99.demo.bibbox.org::P0000002`
 
 ### GET /generate
 `http://idmapping.demo.bibbox.org/idmapping/api/v1.0/generate/SUBJECT@pt99.demo.bibbox.org::P0000002` 
