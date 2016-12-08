@@ -19,7 +19,7 @@ Microservice for ID mapping management in the BIBBOX framework.
 
 
 ### GET /BIBBOXDocker-portlet.get-id-mapping-info
-`http://demo.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId=pt99`
+`http://development.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId=pt99`
 
 ```json
 {
@@ -51,7 +51,7 @@ Microservice for ID mapping management in the BIBBOX framework.
 ```
 
 ### GET / info
-`http://demo.development.bibbox.org/idmapping/api/v1.0/info?id=SUBJECT@pt99.demo.bibbox.org::P0000002`
+`http://idmapping.demo.bibbox.org//idmapping/api/v1.0/info/SUBJECT@pt99.demo.bibbox.org::P0000002`
 
 ### GET /generate
-`http://demo.development.bibbox.org/idmapping/api/v1.0/generate?id=SUBJECT@pt99.demo.bibbox.org::P0000002?type=HR`
+`http://idmapping.demo.bibbox.org/idmapping/api/v1.0/generate/SUBJECT@pt99.demo.bibbox.org::P0000002 

@@ -23,7 +23,7 @@ class IdMappingInfo(Resource):
         print("localID =", localID)
 
         print(instanceName)
-        url = "http://development.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId="+instanceName
+        url = "http://demo.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId="+instanceName
         print(url)
 
         r = requests.get(url,  auth=('userapi', 'changepassword'))
