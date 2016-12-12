@@ -10,9 +10,14 @@ class IdMappingInfo(Resource):
     def __init__(self):
         super(IdMappingInfo, self).__init__()
 
-    def get(self, id):
+    def get(self, fullid):
 
         print (request.url)
+
+        print (fullid)
+
+        thing = fullid.split('@')[0]
+        id = fullid.split('@')[1]
 
         instanceName = id.split('.')[0]
         applicationID = id.split('::')[0]
@@ -28,7 +33,7 @@ class IdMappingInfo(Resource):
 
         r = requests.get(url,  auth=('userapi', 'changepassword'))
         idmaping_info = json.loads (r.text)
-        javascriptCodeArray = idmaping_info['mappings']['SUBJECT']['human_readable']
+        javascriptCodeArray = idmaping_info['mappings'][thing]['human_readable']
 
         js = ''
         for l in javascriptCodeArray:
@@ -45,7 +50,7 @@ class IdMappingInfo(Resource):
         idmaping_info['resolved-mappings']['mappings'] = {}
         idmaping_info['resolved-mappings']['mappings']['human-readable'] = r
 
-        javascriptCodeArray = idmaping_info['mappings']['SUBJECT']['get_info']
+        javascriptCodeArray = idmaping_info['mappings'][thing]['get_info']
 
         js = ''
         for l in javascriptCodeArray:

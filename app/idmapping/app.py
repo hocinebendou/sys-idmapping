@@ -36,7 +36,7 @@ def unauthorized():
 
 
 api.add_resource(GenerateID, '/idmapping/api/v1.0/generate',      endpoint='generate')
-api.add_resource(IdMappingInfo, '/idmapping/api/v1.0/info/<string:id>', endpoint='info')
+api.add_resource(IdMappingInfo, '/idmapping/api/v1.0/info/<string:fullid>', endpoint='info')
 
 if __name__ == '__main__':
     app.run(debug=True)
