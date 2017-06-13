@@ -19,7 +19,11 @@ Microservice for ID mapping management in the BIBBOX framework.
 
 
 ### GET /BIBBOXDocker-portlet.get-id-mapping-info
-`http://demo.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId=pt99`
+`http://demo.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId=pt13rc1`
+
+with the credentials: 
+    username:   userapi 
+    password:   changepassword
 
 ```json
 {
@@ -51,7 +55,51 @@ Microservice for ID mapping management in the BIBBOX framework.
 ```
 
 ### GET / info
-`http://idmapping.demo.bibbox.org/idmapping/api/v1.0/info/SUBJECT@pt99.demo.bibbox.org::P0000002`
-
-### GET /generate
-`http://idmapping.demo.bibbox.org/idmapping/api/v1.0/generate/SUBJECT@pt99.demo.bibbox.org::P0000002` 
+```json
+`http://demo.bibbox.org/idmapping/idmapping/api/v1.0/info/SUBJECT@pt13rc1.demo.bibbox.org::P0000012`
+{
+    "resolved-mappings": {
+        "id": "pt13rc1.demo.bibbox.org::P0000012",
+        "mappings": {
+            "url": "http://pt13rc1.demo.bibbox.org/rest/patients/P0000012",
+            "human-readable": "http://pt13rc1.demo.bibbox.org/bin/P0000012"
+        }
+    },
+    "documentation": [
+        "https://phenotips.org/DevGuide/RESTfulAPI"
+    ],
+    "mappings": {
+        "SUBJECT": {
+            "get_info": [
+                "(",
+                "function() {",
+                "var appID = '&&aid';",
+                "var localId1      = '&&id1';",
+                "var result        = 'http://' + appID + '/rest/patients/' + localId1;",
+                "return result;",
+                "}",
+                ")()"
+            ],
+            "human_readable": [
+                "(",
+                "function() {",
+                "var appID = '&&aid';",
+                "var localId1      = '&&id1';",
+                "var result        = 'http://' + appID + '/bin/' + localId1;",
+                "return result;",
+                "}",
+                ")()"
+            ],
+            "get_all": [
+                "(",
+                "function() {",
+                "var appID = '&&aid';",
+                "var result  = 'http://' + appID + '/rest/patients';",
+                "return result;",
+                "}",
+                ")()"
+            ]
+        }
+    }
+}
+```
