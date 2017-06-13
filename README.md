@@ -22,8 +22,9 @@ Microservice for ID mapping management in the BIBBOX framework.
 `http://demo.bibbox.org/api/jsonws/BIBBOXDocker-portlet.get-id-mapping-info?instanceId=pt13rc1`
 
 with the credentials: 
-    username:   userapi 
-    password:   changepassword
+
+*    username:   userapi 
+*    password:   changepassword
 
 ```json
 {
